@@ -14,6 +14,8 @@ while True:
     "UP" -> update price of particular restaurant
     "PT" -> update process time of particular restaurant
     "PM" -> print menu of particular restaurant
+    "RD" -> print all restaurants data
+    "DI" -> print all dishes info
 
     ******************** For Users ************************
     "OR" -> order from particular restaurant
@@ -229,6 +231,12 @@ while True:
         except ValueError:
             print(
                 "Error: Input value should be an integer")
+
+    elif user_input == "RD":
+        restaurant.all_restaurant_data()
+
+    elif user_input == "DI":
+        restaurant.all_dishes_data()
 
     elif user_input == "EX":
         break

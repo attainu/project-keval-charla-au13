@@ -60,19 +60,19 @@ class Food(Restaurant):
                     print("Dish deleted:", del_dish)
                     break
 
-            if del_dish:
-                print("All Restaurants: ", self.restaurants)
+            # if del_dish:
+            #     print("All Restaurants: ", self.restaurants)
 
             for key in self.all_dishes:
                 if key == dish_name:
                     for i in range(len(self.all_dishes[dish_name])):
                         if self.all_dishes[dish_name][i]["restaurant_name"] ==\
                                 restaurant_name:
-                            del_in_dishes = self.all_dishes[dish_name].pop(i)
+                            self.all_dishes[dish_name].pop(i)
                             break
 
-            if del_in_dishes:
-                print("All Dishes: ", self.all_dishes)
+            # if del_in_dishes:
+            #     print("All Dishes: ", self.all_dishes)
 
         except UnboundLocalError:
             print(
@@ -125,3 +125,6 @@ class Food(Restaurant):
             print(
                 f"({i + 1})  {selected_restaurant_menu[i]['dish_name']}...." +
                 f"...... {selected_restaurant_menu[i]['price']}" + u'\u20B9')
+
+    def all_dishes_data(self):
+        print(self.all_dishes)

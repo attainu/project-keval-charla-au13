@@ -21,3 +21,6 @@ class Restaurant():
             self.restaurants[restaurant_name] = restaurant_details
 
         print(self.restaurants)
+
+    def all_restaurant_data(self):
+        print(self.restaurants)
